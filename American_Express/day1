@@ -1,1 +1,24 @@
 
+'''
+캐글과 구글 코랩 연동 하는 코드
+
+#드라이브 마운트
+from google.colab import drive
+drive.mount('/content/drive')
+
+
+!pwd
+
+%cd /content/drive/MyDrive/Colab Notebooks/American_Express #구글 드라이브 위치 설정
+
+!mkdir -p ~/.kaggle   #캐글 데이터를 가져 오기 위한 로드
+!cp kaggle.json ~/.kaggle
+!chmod 600 ~/.kaggle/kaggle.json
+
+
+ls -1ha kaggle.json  #캐글의 계정이 로드 되어있는지 확인
+
+!kaggle competitions download -c amex-default-prediction
+
+%cd /content/drive/MyDrive/Colab Notebooks/American_Express
+!unzip -qq "/content/drive/MyDrive/Colab Notebooks/American_Express/amex-default-prediction.zip"
