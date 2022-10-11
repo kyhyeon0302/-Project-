@@ -1,0 +1,20 @@
+# 드라이브 마운트
+from google.colab import drive
+drive.mount('/content/drive')
+
+
+!pwd
+
+
+%cd drive/MyDrive/"Colab Notebooks"/concrete
+
+
+!mkdir -p ~/.kaggle
+!cp kaggle.json ~/.kaggle
+!chmod 600 ~/.kaggle/kaggle.json
+
+!kaggle datasets download -d arnavr10880/concrete-crack-images-for-classification
+
+%cd /content/drive/MyDrive/Colab Notebooks/concrete
+
+!unzip -qq "/content/drive/MyDrive/Colab Notebooks/concrete/concrete-crack-images-for-classification.zip"
