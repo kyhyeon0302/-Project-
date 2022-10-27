@@ -1,0 +1,3 @@
+$ cd ~/apache-tomcat-9.0.68/bin   <--- tomcat이 설치된 경로의 bin디렉토리로 이동 // 버전확인 필요함.
+$ ./startup.sh  <--- tomcat실행  
+$ ./shutdown.sh <--- tomcat종료   
